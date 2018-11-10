@@ -61,8 +61,8 @@ uint8_t ssd1306emu_init(SSD1306EMU_Init_t* init)
     screen = new EmuScreen(0, Qt::WindowStaysOnTopHint);
     screen->setGRAM((uint8_t*)gram.data());
     screen->setSizePolicy(QSizePolicy::Fixed, QSizePolicy::Fixed);
-    w = w * (_X_SPACING+_X_SCALE)+_X_SPACING;
-    h = h * (_Y_SPACING+_Y_SCALE)+_Y_SPACING;
+    w = w * (instance->pix_spacing+instance->scale)+instance->pix_spacing;
+    h = h * (instance->pix_spacing+instance->scale)+instance->pix_spacing;
     screen->setMinimumSize(w,h);
     screen->setMaximumSize(w,h);
     screen->updateGeometry();

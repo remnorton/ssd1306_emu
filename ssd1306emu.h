@@ -18,6 +18,8 @@ typedef struct
     uint8_t color;
     uint8_t resolution;
     uint8_t i2c_addr;
+    uint8_t scale;
+    uint8_t pix_spacing;
     exitFunc onCloseCallback;
 }SSD1306EMU_Init_t;
 

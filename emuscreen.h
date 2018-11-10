@@ -20,11 +20,11 @@
 //
 //
 //
-#define _X_SPACING  0
-#define _Y_SPACING  0
+//#define _X_SPACING  0
+//#define _Y_SPACING  0
 
-#define _X_SCALE    2
-#define _Y_SCALE    2
+//#define _X_SCALE    2
+//#define _Y_SCALE    2
 
 
 //

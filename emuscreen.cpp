@@ -139,8 +139,8 @@ void EmuScreen::paintEvent(QPaintEvent* e)
 
                 if (flipY) cy = screenSize.height()-cy-1;
 
-                int sx = _X_SPACING + (_X_SPACING + _X_SCALE)*cx;
-                int sy = _Y_SPACING + (_Y_SPACING + _Y_SCALE)*cy;
+                int sx = instance->pix_spacing + (instance->pix_spacing + instance->scale)*cx;
+                int sy = instance->pix_spacing + (instance->pix_spacing + instance->scale)*cy;
 
                 QRgb rgbcl = getColor(x,y);
                 QColor cl = QColor(QColor(rgbcl));
@@ -151,7 +151,7 @@ void EmuScreen::paintEvent(QPaintEvent* e)
                     if (rgbcl < qRgb(255,255,255)) cl.setHsl(h, s, contrast/2);
                     else cl.setHsl(h, s, contrast);
                 }
-                painter.fillRect(sx, sy, _X_SCALE, _Y_SCALE, QBrush(cl));
+                painter.fillRect(sx, sy, instance->scale, instance->scale, QBrush(cl));
             }
         }
         painter.end();
